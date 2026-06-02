@@ -5,7 +5,7 @@ export default function Home() {
       <header className="border-b border-cyan-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/hoabot-logo.png" alt="HOAbot.ai" className="h-24 sm:h-28 md:h-32" />
+            <img src="/hoabot-logo.png" alt="HOAbot.ai" className="h-48 sm:h-56 md:h-64" />
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#demo" className="text-stone-600 hover:text-[#17B8B8] transition">Demo</a>
@@ -30,7 +30,7 @@ export default function Home() {
               AI Assistant for Your HOA
             </h1>
             <p className="text-xl sm:text-2xl text-stone-600 mb-8">
-              Residents get instant answers from your bylaws and rules — 24/7
+              Residents get instant answers from your bylaws, rules, and any other docs you want to include — 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -137,8 +137,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-cyan-50 to-teal-50 p-6 rounded-2xl">
               <div className="text-3xl mb-4">⏰</div>
-              <h3 className="text-xl font-bold text-[#0B3558] mb-2">Saves 10+ Hours Per Week</h3>
-              <p className="text-stone-600">No more answering the same questions over email</p>
+              <h3 className="text-xl font-bold text-[#0B3558] mb-2">Saves Countless Hours</h3>
+              <p className="text-stone-600">For your Board and Management team</p>
             </div>
             <div className="bg-gradient-to-br from-cyan-50 to-teal-50 p-6 rounded-2xl">
               <div className="text-3xl mb-4">🌙</div>
@@ -206,11 +206,11 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <div className="bg-gradient-to-br from-[#17B8B8] to-teal-600 text-white rounded-3xl shadow-2xl p-8 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                ⚡ FOUNDER PRICING ⚡
+                LIMITED TIME OFFER
               </div>
               
               <div className="text-center mt-4 mb-8">
-                <h3 className="text-2xl font-bold mb-6">Founding Member</h3>
+                <h3 className="text-2xl font-bold mb-6">Essential Plan</h3>
                 <div className="mb-2">
                   <span className="text-5xl font-bold">$199</span>
                   <span className="text-cyan-100 text-xl ml-2">one-time</span>
@@ -261,7 +261,7 @@ export default function Home() {
               </a>
               
               <p className="text-center text-cyan-100 text-sm mt-6">
-                First 25 founding members only • Then $499 + $69/mo
+                Limited time introductory pricing • Price increases soon
               </p>
             </div>
             
@@ -345,7 +345,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-[#17B8B8] to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Ready to Save 10+ Hours Per Week?
+            Ready to Save Your Team Countless Hours?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
             Join HOAs across the country using AI to improve resident satisfaction
@@ -357,7 +357,7 @@ export default function Home() {
             Get Started - $199 + $39/mo
           </a>
           <p className="text-cyan-100 mt-6">
-            Live in 1 hour • 30-day guarantee • First 25 get founder pricing
+            Live in 1 hour • 30-day guarantee • Limited time pricing
           </p>
         </div>
       </section>
