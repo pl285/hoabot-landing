@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HOAbot.ai - Landing Page
 
-## Getting Started
+## 🚀 Marketing website for HOAbot.ai
 
-First, run the development server:
+Built with Next.js 16 + Tailwind CSS
+
+---
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy to Vercel
 
-## Learn More
+### 1. Install Vercel CLI
+```bash
+npm i -g vercel
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Deploy
+```bash
+vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Add Custom Domain
+In Vercel dashboard:
+- Settings → Domains
+- Add `hoabot.ai`
+- Follow DNS instructions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Stripe Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Replace the placeholder URL in `app/page.tsx`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```tsx
+href="https://buy.stripe.com/test_placeholder"
+```
+
+With your real Stripe Payment Link:
+
+1. Go to stripe.com → Products
+2. Create "HOAbot Setup" - $999 one-time
+3. Create "HOAbot Monthly" - $99/mo recurring
+4. Create Payment Link
+5. Paste URL in the code
+
+---
+
+## Demo Chatbot
+
+Replace the demo section with actual iframe once demo.hoabot.ai is live:
+
+```tsx
+<iframe 
+  src="https://demo.hoabot.ai" 
+  className="w-full h-full border-0 rounded-lg"
+  title="HOAbot Demo"
+/>
+```
+
+---
+
+## Customization
+
+### Colors
+Edit `tailwind.config.ts` to change brand colors
+
+### Content
+Edit `app/page.tsx` to update copy
+
+### Fonts
+Fonts are loaded from Google Fonts automatically (Inter)
+
+---
+
+## Structure
+
+```
+app/
+  layout.tsx     # Site metadata, SEO
+  page.tsx       # Main landing page
+  globals.css    # Global styles
+
+public/
+  # Add images here
+```
+
+---
+
+## Next Steps
+
+1. ✅ Deploy to Vercel
+2. ⏳ Set up Stripe Payment Links
+3. ⏳ Build demo chatbot (demo.hoabot.ai)
+4. ⏳ Add screenshot/video to hero
+5. ⏳ Test checkout flow
+6. ⏳ Launch! 🚀
