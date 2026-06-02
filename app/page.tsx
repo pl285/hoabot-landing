@@ -254,7 +254,7 @@ export default function Home() {
               </ul>
 
               <a 
-                href="https://buy.stripe.com/test_placeholder" 
+                href="https://buy.stripe.com/REPLACE_WITH_REAL_LINK" 
                 className="block w-full bg-white text-[#17B8B8] text-center px-8 py-4 rounded-full font-bold hover:bg-cyan-50 transition shadow-lg text-lg"
               >
                 Get Started Now
