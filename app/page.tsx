@@ -3,9 +3,9 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50">
       {/* Header */}
       <header className="border-b border-cyan-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/hoabot-logo.png" alt="HOAbot.ai" className="h-32" />
+            <img src="/hoabot-logo.png" alt="HOAbot.ai" className="h-24 sm:h-28 md:h-32" />
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#demo" className="text-stone-600 hover:text-[#17B8B8] transition">Demo</a>
@@ -43,13 +43,13 @@ export default function Home() {
                 href="#pricing" 
                 className="bg-[#17B8B8] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0E9898] transition shadow-lg text-lg"
               >
-                Get Started - $99/mo
+                Get Started - $39/mo
               </a>
             </div>
           </div>
 
           {/* Live Demo - Hero */}
-          <div className="max-w-5xl mx-auto">
+          <div id="demo" className="max-w-5xl mx-auto">
             <div className="rounded-2xl border-8 border-cyan-100 shadow-2xl bg-white p-8">
               <iframe 
                 src="https://demo.hoabot.ai" 
@@ -206,19 +206,23 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <div className="bg-gradient-to-br from-[#17B8B8] to-teal-600 text-white rounded-3xl shadow-2xl p-8 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                LAUNCH PRICING
+                ⚡ FOUNDER PRICING ⚡
               </div>
               
               <div className="text-center mt-4 mb-8">
-                <h3 className="text-2xl font-bold mb-6">Essential</h3>
+                <h3 className="text-2xl font-bold mb-6">Founding Member</h3>
                 <div className="mb-2">
-                  <span className="text-5xl font-bold">$999</span>
+                  <span className="text-5xl font-bold">$199</span>
                   <span className="text-cyan-100 text-xl ml-2">one-time</span>
                 </div>
                 <div className="text-cyan-100 text-lg mb-1">+</div>
                 <div>
-                  <span className="text-5xl font-bold">$99</span>
+                  <span className="text-5xl font-bold">$39</span>
                   <span className="text-cyan-100 text-xl">/month</span>
+                </div>
+                <div className="mt-4 bg-white/10 rounded-lg px-4 py-3 backdrop-blur-sm">
+                  <p className="text-sm line-through text-cyan-200 mb-1">Regular: $999 + $99/mo</p>
+                  <p className="text-lg font-bold text-amber-300">You Save $1,719 First Year!</p>
                 </div>
               </div>
 
@@ -237,11 +241,15 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-2xl">✓</span>
-                  <span>Email support</span>
+                  <span>Free updates anytime</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-2xl">✓</span>
-                  <span>Updates anytime</span>
+                  <span>Email support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🔒</span>
+                  <span><strong>Lifetime $39/mo price lock</strong></span>
                 </li>
               </ul>
 
@@ -253,12 +261,12 @@ export default function Home() {
               </a>
               
               <p className="text-center text-cyan-100 text-sm mt-6">
-                First 20 customers only • Then $1,499 + $149/mo
+                First 25 founding members only • Then $499 + $69/mo
               </p>
             </div>
             
             <p className="text-center text-stone-500 text-sm mt-8">
-              Live in 1 hour • No contracts • Cancel anytime
+              Live in 1 hour • No contracts • 30-day money-back guarantee
             </p>
           </div>
         </div>
@@ -316,7 +324,7 @@ export default function Home() {
                 <span className="text-[#17B8B8] group-open:rotate-180 transition">▼</span>
               </summary>
               <p className="text-stone-600 mt-4 leading-relaxed">
-                Yes - no long-term contracts. You can cancel your subscription anytime from your dashboard. The $999 setup fee is non-refundable.
+                Yes - no long-term contracts. You can cancel your subscription anytime from your dashboard. The $199 setup fee is non-refundable, but we offer a 30-day money-back guarantee if you're not satisfied.
               </p>
             </details>
 
@@ -326,7 +334,7 @@ export default function Home() {
                 <span className="text-[#17B8B8] group-open:rotate-180 transition">▼</span>
               </summary>
               <p className="text-stone-600 mt-4 leading-relaxed">
-                Yes! We provide simple embed code you can paste into your website, or we can install it for you for $199.
+                Yes! We provide simple embed code you can paste into your website, or we can install it for you at no extra charge.
               </p>
             </details>
           </div>
@@ -346,10 +354,10 @@ export default function Home() {
             href="#pricing" 
             className="inline-block bg-white text-[#17B8B8] px-10 py-5 rounded-full font-bold hover:bg-cyan-50 transition shadow-xl text-xl"
           >
-            Get Started - $999 + $99/mo
+            Get Started - $199 + $39/mo
           </a>
           <p className="text-cyan-100 mt-6">
-            Live in 1 hour • No contracts • First 20 get launch pricing
+            Live in 1 hour • 30-day guarantee • First 25 get founder pricing
           </p>
         </div>
       </section>

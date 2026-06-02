@@ -22,6 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script dangerouslySetInnerHTML={{__html: `
+          if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+          }
+          window.addEventListener('load', function() {
+            setTimeout(function() {
+              window.scrollTo(0, 0);
+            }, 0);
+          });
+        `}} />
+      </head>
       <body className="antialiased">
         {children}
       </body>
