@@ -254,7 +254,7 @@ export default function Home() {
               </ul>
 
               <a 
-                href="https://buy.stripe.com/3cI7sN0sR2Jc28gfkveME00" 
+                href="https://buy.stripe.com/8x214p4J7cjMcMUegreME01" 
                 className="block w-full bg-white text-[#17B8B8] text-center px-8 py-4 rounded-full font-bold hover:bg-cyan-50 transition shadow-lg text-lg"
               >
                 Get Started Now
