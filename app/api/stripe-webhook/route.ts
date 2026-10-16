@@ -1,22 +1,43 @@
-import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
+import { exec } from "child_process";
+import { NextRequest, NextResponse } from "next/server";
+import Stripe from "stripe";
+import { promisify } from "util";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-11-20.acacia',
-});
+const execPromise = promisify(exec);
 
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+function getStripe() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) {
+    throw new Error("STRIPE_SECRET_KEY is not set");
+  }
+  return new Stripe(key, {
+    apiVersion: "2026-05-27.dahlia",
+  });
+}
 
 export async function POST(req: NextRequest) {
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  if (!webhookSecret) {
+    return NextResponse.json(
+      { error: "Webhook secret is not set" },
+      { status: 500 },
+    );
+  }
+
+  const stripe = getStripe();
   const body = await req.text();
-  const sig = req.headers.get('stripe-signature')!;
+  const sig = req.headers.get("stripe-signature");
+  if (!sig) {
+    return NextResponse.json({ error: "Missing signature" }, { status: 400 });
+  }
 
   let event: Stripe.Event;
 
   try {
     event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
-  } catch (err: any) {
-    console.error(`Webhook signature verification failed: ${err.message}`);
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    console.error(`Webhook signature verification failed: ${message}`);
     return NextResponse.json({ error: 'Webhook Error' }, { status: 400 });
   }
 
@@ -44,10 +65,6 @@ export async function POST(req: NextRequest) {
 }
 
 async function sendWelcomeEmail(to: string, name: string) {
-  const { exec } = require('child_process');
-  const util = require('util');
-  const execPromise = util.promisify(exec);
-
   const emailBody = `Hi ${name},
 
 Thanks for choosing HOAbot! We're excited to build your AI assistant.
@@ -64,7 +81,7 @@ Simply reply to this email and attach:
 
 1. We'll receive your documents
 2. We'll set up your bot at **[subdomain].hoabot.ai** (we'll confirm the URL with you)
-3. You'll receive a link to test it (usually within 1 hour)
+3. You'll receive a link to test it (usually within about an hour after we receive your documents)
 4. Once you approve, we'll send you the link to share with residents
 
 **Questions?**
