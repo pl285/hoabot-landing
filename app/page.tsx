@@ -208,7 +208,7 @@ export default function Home() {
                 <p className="font-semibold text-[#0B3558]">
                   Renaissance on Turtle Creek
                 </p>
-                <p className="text-stone-600">300-unit luxury condo, Dallas</p>
+                <p className="text-stone-600">603-unit luxury condo, Dallas</p>
               </div>
             </div>
             <div className="mt-8 pt-8 border-t border-stone-200">
